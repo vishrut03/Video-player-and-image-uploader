@@ -1,9 +1,17 @@
 import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Dashboard from "./Pages/Dashboard";
+import Home from "./Pages/Home";
+import Player from "./Pages/Player";
 
 export default function App() {
   return (
-    <div>
-      <h1 className="text-red-500">Assignment is started</h1>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/player" element={<Player />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
