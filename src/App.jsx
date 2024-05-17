@@ -1,5 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Dashboard from "./Pages/Dashboard";
 import Home from "./Pages/Home";
 import Player from "./Pages/Player";
@@ -14,6 +16,7 @@ export default function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/player" element={<Player />} />
       </Routes>
+      <ToastContainer />
     </BrowserRouter>
   );
 }
