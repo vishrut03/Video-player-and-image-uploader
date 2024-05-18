@@ -25,7 +25,9 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="bg-slate-200 shadow-md">
+    <header
+      className={`top-0 sticky w-full z-30 bg-white border-y-2 border-slate-300`}
+    >
       <div className="flex items-center justify-between max-w-6xl p-3">
         <div className="relative group" ref={menuRef}>
           <button
